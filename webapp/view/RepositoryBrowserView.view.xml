@@ -1,0 +1,85 @@
+<mvc:View controllerName="com.hcl.poc.RepositoryBrowser.controller.RepositoryBrowserView" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<VBox id="vboxRepoParams" width="100%" alignItems="Center" class="sapUiSmallMarginBottom">
+						<HBox width="auto" class="sapUiSmallMarginTop">
+							<Label text="Repository Name" labelFor="txtRepositoryName" class="sapUiSmallMarginTop sapUiTinyMarginEnd"/>
+							<Input id="txtRepositoryName" required="true" value="POCRepository" class="sapUiTinyMarginBegin sapUiMediumMarginEnd"/>
+							<Label text="Repository Key" labelFor="txtRepositoryKey" class="sapUiSmallMarginTop sapUiMediumMarginBegin sapUiTinyMarginEnd"/>
+							<Input id="txtRepositoryKey" required="true" value="POCRepository_key" class="sapUiTinyMarginBegin sapUiMediumMarginEnd"/>
+							<Button icon="sap-icon://browse-folder" text="Explore" press="onBrowseRepository" class="sapUiMediumMarginBegin"/>
+						</HBox>
+					</VBox>
+					<VBox id="vboxExplorer" alignContent="Center">
+						<Toolbar width="100%" class="sapUiSmallMarginBottom">
+							<core:Icon src="sap-icon://open-folder" color="#031E48" useIconTooltip="true" tooltip="Custom Fiori Application" class="sapUiLargeMarginBegin sapUiTinyMarginEnd size1">
+								<core:layoutData>
+									<FlexItemData growFactor="1" />
+								</core:layoutData>
+							</core:Icon>
+							<Breadcrumbs id="brcmbFile" class="sapUiSmallMarginTop"/>
+							<ToolbarSpacer/>
+							<core:Icon src="sap-icon://add" color="#031E48" useIconTooltip="true" tooltip="Create Folder or Add Files" press="onRepositoryAdd" class="sapUiSmallMarginEnd size1">
+								<core:layoutData>
+									<FlexItemData growFactor="1" />
+								</core:layoutData>
+							</core:Icon>
+							<core:Icon src="sap-icon://journey-depart" color="#031E48" useIconTooltip="true" tooltip="Move Selected" press="onRepositoryMove" class="sapUiSmallMarginBegin sapUiSmallMarginEnd size1">
+								<core:layoutData>
+									<FlexItemData growFactor="1" />
+								</core:layoutData>
+							</core:Icon>
+							<core:Icon src="sap-icon://delete" color="#031E48" useIconTooltip="true" tooltip="Delete Selected" press="onDeleteContent" class="sapUiSmallMarginBegin sapUiSmallMarginEnd size1">
+								<core:layoutData>
+									<FlexItemData growFactor="1" />
+								</core:layoutData>
+							</core:Icon>
+							<core:Icon src="sap-icon://log" color="#031E48" useIconTooltip="true" tooltip="Logout from Repository" press="onLogoutRepository" class="sapUiSmallMarginBegin sapUiLargeMarginEnd size1">
+								<core:layoutData>
+									<FlexItemData growFactor="1" />
+								</core:layoutData>
+							</core:Icon>
+						</Toolbar>
+						
+						<Table id="tblFileSet" items="{path:'/results'}" fixedLayout="false" width="93%" mode="MultiSelect" modeAnimationOn="true" class="sapUiLargeMarginBegin sapUiLargeMarginEnd">
+							<columns>
+								<Column>
+									<Text text="Name"/>
+								</Column>
+								<Column>
+									<Text text="Size"/>
+								</Column>
+								<Column>
+									<Text text="Date Created"/>
+								</Column>
+								<Column>
+									<Text text="Created By"/>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<l:HorizontalLayout>
+											<core:Icon src="sap-icon://{ICON}" color="#031E48" useIconTooltip="true" tooltip="Custom Fiori Application" class="sapUiTinyMarginEnd size0">
+												<core:layoutData>
+													<FlexItemData growFactor="1" />
+												</core:layoutData>
+											</core:Icon>
+											<Link text="{FILENAME}" press="onPressContentLink"/>
+										</l:HorizontalLayout>
+										<Text text="{SIZE} {SIZE_UNIT}"/>
+										<Text text="{CREATED_ON}"/>
+										<Text text="{CREATED_BY}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

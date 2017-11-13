@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<l:HorizontalLayout  class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+		<u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" width="400px" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete" class="sapUiMediumMarginBegin sapUiTinyMarginEnd"/>
+		<Button icon="sap-icon://upload" text="Upload" press="handleUploadPress" class="sapUiTinyMarginBegin sapUiMediumMarginEnd"/>
+	</l:HorizontalLayout>
+</core:FragmentDefinition>

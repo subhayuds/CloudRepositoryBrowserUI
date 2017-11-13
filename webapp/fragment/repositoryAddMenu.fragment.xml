@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<u:Menu>
+		<u:MenuItem text="Add Folder" select="onHandleAddFolder" icon="sap-icon://add-folder"/>
+		<u:MenuItem text="Add File" select="onHandleAddFile" icon="sap-icon://add-document"/>
+	</u:Menu>
+</core:FragmentDefinition>

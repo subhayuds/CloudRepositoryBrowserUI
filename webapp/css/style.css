@@ -1,0 +1,39 @@
+.size0 {
+	font-size : 1.0rem;
+}
+
+.size1 {
+	font-size : 1.5rem;
+}
+
+.size2 {
+	font-size : 2rem;
+}
+
+.sapMListTbl th {
+    vertical-align: middle;
+    height: 15px;
+}
+
+.sapMListTblRow {
+	height: 25px;
+}
+
+.sapMListTblCell {
+    padding: .175rem .3rem  !important;
+    font-size: 0.675rem !important;
+    vertical-align: middle;
+    text-align:left !important;
+}
+
+/* Table Check Box Style */
+.sapMCb {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.sapMCbBg {
+	top: 0.3em;
+	height: 0.75rem;
+	width: 0.75rem;
+}

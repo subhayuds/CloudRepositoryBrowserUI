@@ -1,0 +1,5 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Tree id="Tree" items="{path: '/'}">
+        <StandardTreeItem title="{text}" icon="{ref}"/>
+	</Tree>
+</core:FragmentDefinition>

@@ -1,0 +1,6 @@
+<core:FragmentDefinition xmlns:l="sap.ui.layout" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<l:HorizontalLayout  class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+		<Label text="Folder Name" labelFor="txtFolderName" class="sapUiMediumMarginBegin sapUiSmallMarginTop sapUiTinyMarginEnd"/>
+		<Input id="txtFolderName" required="true" value="" placeholder="Enter the new folder name" class="sapUiTinyMarginBegin sapUiMediumMarginEnd"/>
+	</l:HorizontalLayout>
+</core:FragmentDefinition>
